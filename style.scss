@@ -45,31 +45,32 @@ body {
 
 ::-webkit-scrollbar {
     width: 8px;
-  }
+    height: 8px;
+}
   
-  ::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
     background-color: $color-5;
     border-radius: 5px;
-  }
+}
   
-  ::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background-color: $color-1;
     border-radius: 5px;
-  }
+}
 
 .container {
     @include flexible(row,center,center,0 );
-    width: 1200px;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
 }
 .block {
-    width: 100%;
+    width: 1200px;
     height: 90vh;
     display: flex;
 }
 .box-img {
-    width: 52%;
+    width: 50%;
     height: 100%;
 
     background: url("img/bg.jpg") center / cover no-repeat;
@@ -88,7 +89,7 @@ body {
     }
 }
 .box-form {
-    width: 48%;
+    min-width: 580px;
     height: 100%;
     padding: 85px 50px;
     background-color: $color-6;
@@ -268,7 +269,7 @@ body {
         .box-form__span-i {
             position: relative;
         }
-        .box-form__span-i:hover::after {
+        .box-form__span-i:hover::before {
             content: "I am a natural person investing on my own behalf as a sole owned, join tenant, or tenant in common.";
             display: block;
             position: absolute;
@@ -337,5 +338,52 @@ body {
             color: $color-6;
             font-size: 13px;
             font-weight: 500;
+    }
+}
+
+@media (max-width:775px) {
+    .box-img {
+        display: none;
+    }
+    .box-form {
+        margin: 0 auto;
+    }
+}
+@media (max-width:500px) {
+    .block {
+        height: 100%;
+    }
+    .box-form {
+        @include flexible(column,center,center,0);
+        margin: 0 auto;
+        .box-form__subheader {
+            font-size: 13px;
+        }
+        .box-form__box-buttons {
+            @include flexible(column,center,center,20px);
+        }
+        .box-form__formUser form  {
+            @include flexible(column,center,center,10px);
+        }
+        .box-form__formRadio {
+            margin-bottom: 50px;
+            label + label {
+                margin-left: 10px;
+            }
+            label > span {
+                margin-left: 5px; 
+            }
+        }
+        .box-form__checkbox label {
+            @include flexible(column,center,center,5px);
+        }
+        .box-form__checkbox span {
+            width: 100vw;
+            text-align: center;
+            padding: 0 5px;
+        }
+        .box-form__a-button_created {
+            height: 40px;
+        }
     }
 }

@@ -23,7 +23,8 @@ body {
   color: #2A4A5C; }
 
 ::-webkit-scrollbar {
-  width: 8px; }
+  width: 8px;
+  height: 8px; }
 
 ::-webkit-scrollbar-track {
   background-color: #EEEEEE;
@@ -39,17 +40,17 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0;
-  width: 1200px;
+  width: 100%;
   height: 100%;
   margin: 0 auto; }
 
 .block {
-  width: 100%;
+  width: 1200px;
   height: 90vh;
   display: flex; }
 
 .box-img {
-  width: 52%;
+  width: 50%;
   height: 100%;
   background: url("img/bg.jpg") center/cover no-repeat; }
   .box-img .logo {
@@ -64,7 +65,7 @@ body {
       transform: scale(1.2); }
 
 .box-form {
-  width: 48%;
+  min-width: 580px;
   height: 100%;
   padding: 85px 50px;
   background-color: #FFFFFF;
@@ -207,7 +208,7 @@ body {
       transform: translate(0, -15%); }
     .box-form .box-form__formRadio .box-form__span-i {
       position: relative; }
-    .box-form .box-form__formRadio .box-form__span-i:hover::after {
+    .box-form .box-form__formRadio .box-form__span-i:hover::before {
       content: "I am a natural person investing on my own behalf as a sole owned, join tenant, or tenant in common.";
       display: block;
       position: absolute;
@@ -266,5 +267,55 @@ body {
     color: #FFFFFF;
     font-size: 13px;
     font-weight: 500; }
+
+@media (max-width: 775px) {
+  .box-img {
+    display: none; }
+
+  .box-form {
+    margin: 0 auto; } }
+@media (max-width: 500px) {
+  .block {
+    height: 100%; }
+
+  .box-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 0 auto; }
+    .box-form .box-form__subheader {
+      font-size: 13px; }
+    .box-form .box-form__box-buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 20px; }
+    .box-form .box-form__formUser form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px; }
+    .box-form .box-form__formRadio {
+      margin-bottom: 50px; }
+      .box-form .box-form__formRadio label + label {
+        margin-left: 10px; }
+      .box-form .box-form__formRadio label > span {
+        margin-left: 5px; }
+    .box-form .box-form__checkbox label {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 5px; }
+    .box-form .box-form__checkbox span {
+      width: 100vw;
+      text-align: center;
+      padding: 0 5px; }
+    .box-form .box-form__a-button_created {
+      height: 40px; } }
 
 /*# sourceMappingURL=style.css.map */
