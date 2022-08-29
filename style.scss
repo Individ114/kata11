@@ -1,17 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Amatic+SC&family=Barlow:wght@100;200;300;400;500;600;700&family=Indie+Flower&display=swap");
 
-$color-fon: #EFF6FF;
-$color-default-text: #2A4A5C;
-$color-button-fb: #255A9B;
-$color-button-in: #0076B6;
-$color-1: #3698FB;
-$color-2: #7B8A92;
-$color-3: #96A5B1;
-$color-4: #AFAFAF;
-$color-5: #EEEEEE;
-$color-6: #FFFFFF;
+$color-fon: #eff6ff;
+$color-default-text: #2a4a5c;
+$color-button-fb: #255a9b;
+$color-button-in: #0076b6;
+$color-1: #3698fb;
+$color-2: #7b8a92;
+$color-3: #96a5b1;
+$color-4: #afafaf;
+$color-5: #eeeeee;
+$color-6: #ffffff;
 
-@mixin flexible($q,$w,$e,$r) {
+@mixin flexible($q, $w, $e, $r) {
     display: flex;
     flex-direction: $q;
     justify-content: $w;
@@ -22,44 +22,44 @@ $color-6: #FFFFFF;
 *,
 *:before,
 *:after {
-      padding: 0;
-      margin: 0;
-      border: 0;
-      box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
 }
 a,
 a:visited,
 a:hover {
-      text-decoration: none;
+    text-decoration: none;
 }
 html,
 body {
-      height: 100vh;
-      width: 100vw;
-      background-color: rgb(165, 165, 165);
-      font-family: "Barlow", sans-serif;
-      background-color: $color-fon;
-      overflow: hidden;
-      color: $color-default-text
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(165, 165, 165);
+    font-family: "Barlow", sans-serif;
+    background-color: $color-fon;
+    overflow: hidden;
+    color: $color-default-text;
 }
 
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
 }
-  
+
 ::-webkit-scrollbar-track {
     background-color: $color-5;
     border-radius: 5px;
 }
-  
+
 ::-webkit-scrollbar-thumb {
     background-color: $color-1;
     border-radius: 5px;
 }
 
 .container {
-    @include flexible(row,center,center,0 );
+    @include flexible(row, center, center, 0);
     width: 100%;
     height: 100%;
     margin: 0 auto;
@@ -109,7 +109,7 @@ body {
     }
 
     .box-form__box-buttons {
-        @include flexible(row,center,center,0 );
+        @include flexible(row, center, center, 0);
         margin-bottom: 40px;
         .box-form__button {
             position: relative;
@@ -121,7 +121,7 @@ body {
                 left: 10px;
                 width: 17px;
                 height: 17px;
-                transform: translate(0,-50%);
+                transform: translate(0, -50%);
                 pointer-events: none;
             }
             &:hover {
@@ -140,15 +140,16 @@ body {
             background-color: $color-button-in;
             margin-left: auto;
         }
-        .box-form__a-reg-fb,.box-form__a-reg-in {
-            @include flexible(row,center,center,0);
+        .box-form__a-reg-fb,
+        .box-form__a-reg-in {
+            @include flexible(row, center, center, 0);
             width: 100%;
             height: 100%;
             color: $color-5;
             font-size: 13px;
         }
     }
-    
+
     .box-form__line {
         width: 100%;
         display: flex;
@@ -163,7 +164,6 @@ body {
             width: 222px;
             height: 2px;
             background-color: $color-5;
-            
         }
         p {
             z-index: 2;
@@ -172,51 +172,51 @@ body {
             font-size: 11px;
             font-weight: 700;
             text-align: center;
-            transform: translate(0,-50%);
+            transform: translate(0, -50%);
         }
     }
 
     .box-form__formUser {
         margin-bottom: 50px;
         form {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-        label span {
-            display: block;
-            transform: translate(10px,20px);
-            font-size: 12px;
-            font-weight: 600;
-            color: $color-4;
-            pointer-events: none;
-        }
-        input {
-            display: block;
-            width: 222px;
-            height: 50px;
-            cursor: text;
-            outline: none;
-            border: 1px solid $color-5;
-            border-radius: 2px;
-            padding-left: 10px;
-            padding-top: 15px;
-            &:hover {
-                border-left: 1px solid $color-1;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            label span {
+                display: block;
+                transform: translate(10px, 20px);
+                font-size: 12px;
+                font-weight: 600;
+                color: $color-4;
+                pointer-events: none;
             }
-            &:focus {
-                border-left: 1px solid $color-1;
+            input {
+                display: block;
+                width: 222px;
+                height: 50px;
+                cursor: text;
+                outline: none;
+                border: 1px solid $color-5;
+                border-radius: 2px;
+                padding-left: 10px;
+                padding-top: 15px;
+                &:hover {
+                    border-left: 1px solid $color-1;
+                }
+                &:focus {
+                    border-left: 1px solid $color-1;
+                }
             }
-        }
 
-        .box-form__input_email {
-            margin-left: auto;
-        }
-        .box-form__input_phone {
-            margin-left: auto;
-        }
+            .box-form__input_email {
+                margin-left: auto;
+            }
+            .box-form__input_phone {
+                margin-left: auto;
+            }
         }
     }
-    
+
     .box-form__heading {
         margin-bottom: 7px;
         h3 {
@@ -237,11 +237,11 @@ body {
             margin-left: 35px;
         }
         label > span {
-            margin-left: 10px; 
+            margin-left: 10px;
         }
         label span .box-form__span-i {
             display: inline-flex;
-            transform: translate(3px,3px);
+            transform: translate(3px, 3px);
             font-size: 9px;
             color: #d3d3d3;
         }
@@ -264,7 +264,7 @@ body {
             font-size: 13px;
             font-weight: 600;
             display: inline-flex;
-            transform: translate(0,-15%);
+            transform: translate(0, -15%);
         }
         .box-form__span-i {
             position: relative;
@@ -287,7 +287,7 @@ body {
     }
     .box-form__checkbox {
         label {
-           display: flex;
+            display: flex;
         }
         label input {
             width: 10px;
@@ -314,7 +314,7 @@ body {
             text-decoration: underline;
         }
     }
-    
+
     .box-form__button_createdAc {
         margin-top: 50px;
         width: 222px;
@@ -329,19 +329,18 @@ body {
             transition: 0.2s;
             opacity: 0.5;
         }
-        
     }
     .box-form__a-button_created {
-        @include flexible(row,center,center,0);
-            width: 100%;
-            height: 100%;
-            color: $color-6;
-            font-size: 13px;
-            font-weight: 500;
+        @include flexible(row, center, center, 0);
+        width: 100%;
+        height: 100%;
+        color: $color-6;
+        font-size: 13px;
+        font-weight: 500;
     }
 }
 
-@media (max-width:775px) {
+@media (max-width: 775px) {
     .box-img {
         display: none;
     }
@@ -349,21 +348,23 @@ body {
         margin: 0 auto;
     }
 }
-@media (max-width:500px) {
+@media (max-width: 585px) {
     .block {
         height: 100%;
     }
     .box-form {
-        @include flexible(column,center,center,0);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin: 0 auto;
         .box-form__subheader {
             font-size: 13px;
         }
         .box-form__box-buttons {
-            @include flexible(column,center,center,20px);
+            @include flexible(column, center, center, 20px);
         }
-        .box-form__formUser form  {
-            @include flexible(column,center,center,10px);
+        .box-form__formUser form {
+            @include flexible(column, center, center, 10px);
         }
         .box-form__formRadio {
             margin-bottom: 50px;
@@ -371,11 +372,11 @@ body {
                 margin-left: 10px;
             }
             label > span {
-                margin-left: 5px; 
+                margin-left: 5px;
             }
         }
         .box-form__checkbox label {
-            @include flexible(column,center,center,5px);
+            @include flexible(column, center, center, 5px);
         }
         .box-form__checkbox span {
             width: 100vw;
